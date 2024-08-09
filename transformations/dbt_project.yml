@@ -1,0 +1,10 @@
+name: 'your_project'
+config-version: 2
+
+profile: 'default'
+
+vars:
+  database_name: "{{ env_var('DB_NAME') }}"
+  api_key: "{{ env_var('API_KEY') }}"
+
+# ... rest of your dbt_project.yml configuration

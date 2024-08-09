@@ -1,0 +1,12 @@
+# models/staging/sources.yml
+# The ingestion layer loads raw data into your data warehouse, which the transformation layer then uses as a source. You define these sources in dbt:
+
+version: 2
+
+sources:
+  - name: raw
+    database: your_database_name
+    schema: your_schema_name
+    tables:
+      - name: raw_data_1
+      - name: raw_data_2

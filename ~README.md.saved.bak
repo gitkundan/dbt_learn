@@ -1,0 +1,37 @@
+# dbt_learn
+
+1) First time setup
+Open terminal
+2) Check Python version is python 3.10 : from your terminal type python -V
+2) git clone repo && cd repo && python -m venv .venv && source .venv/scripts/activate && code .
+3) 
+
+## Git workflow
+a) From jira create a feature branch with the following naming convention : 
+b) git pull 
+
+## Folder Structure
+![folder structure](folder_structure.JPG)
+
+
+Let's break down each component:
+
+1.`dbt_project.yml`: This is the main configuration file for your dbt project.
+
+`analyses/:` Contains SQL files for ad-hoc analyses that don't need to be materialized.
+
+macros/: Stores reusable Jinja macros for your project.
+
+models/: This is where most of your data transformation logic resides.
+
+staging/: Contains models that clean and standardize raw data.
+intermediate/: Houses models that combine and transform staged data.
+marts/: Stores final, business-ready data models.
+seeds/: Holds CSV files that can be loaded as tables in your data warehouse.
+
+snapshots/: Contains configurations for slowly changing dimension (SCD) tables.
+
+tests/: Stores custom data tests to ensure data quality.
+
+To set up this structure, you can use the dbt init command, which creates a basic project structure. You can then customize it by adding the subdirectories within the models/ folder.
+
